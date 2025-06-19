@@ -76,13 +76,67 @@
     }
   </style>
   <body>
-    <nav class="navbar bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <h2 style="color: rgb(55, 55, 214)"><b>Orienta-la</b></h2>
-        </a>
-      </div>
-    </nav>
+<nav class="navbar custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <h2><b>Orienta-la</b></h2>
+    </a>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link" href="tipoconta.html">Criar Conta</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="login.html">Entrar</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  /* Navbar background */
+  .custom-navbar {
+    background-color: #5e53ff; /* roxo forte */
+    padding: 1rem 0;
+    box-shadow: 0 2px 6px rgba(94, 83, 255, 0.3);
+  }
+
+  /* Marca do site */
+  .custom-navbar .navbar-brand h2 {
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  /* Links de navegação */
+  .custom-navbar .nav-link {
+    color: #d1d1ff;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5rem 2rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 6px;
+  }
+
+  /* Link ativo */
+  .custom-navbar .nav-link.active,
+  .custom-navbar .nav-link:hover {
+    color: #fff;
+    background-color: #7c75ff; /* tom mais claro para hover/ativo */
+    text-decoration: none;
+  }
+
+  /* Responsividade: menu empilhado em telas pequenas */
+  @media (max-width: 575.98px) {
+    .custom-navbar .nav {
+      justify-content: center !important;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+</style>
+
 
     <div class="container">
       <div class="row">
@@ -100,7 +154,7 @@
             o teu people e ainda sacar uma boa moeda com o teu conteúdo.💸🔥
           </h3>
           <br />
-          <a href="novaconta.html" class="botao" style="color: #fff">Criar Conta</a>
+          <a href="tipoconta.html" class="botao" style="color: #fff">Criar Conta</a>
         </div>
         <div class="col">
           <img
@@ -116,6 +170,7 @@
     <br />
 
     <br />
+
     <div class="container text-center">
       <h1 class="section-title" style="color: rgb(55, 55, 214)">
         Como funciona
@@ -160,6 +215,223 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+<br><br><br>
+
+<div class="container text-center my-5 p-4" style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 15px rgb(94 83 255 / 0.3);">
+  <h1 class="section-title mb-4" style="color: #3737d6; font-weight: 700; font-size: 2.8rem; font-family: 'Poppins', sans-serif;">
+    Perguntas Frequentes
+  </h1>
+
+  <div class="accordion" id="faqAccordion" style="text-align: left;">
+    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgb(94 83 255 / 0.15);">
+      <h2 class="accordion-header" id="headingOne">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+          style="background: #5e53ff; color: #fff; font-weight: 600; font-size: 1.1rem; border: none; box-shadow: none;"
+        >
+          1. O que é o Orienta-la?
+        </button>
+      </h2>
+      <div
+        id="collapseOne"
+        class="accordion-collapse collapse show"
+        aria-labelledby="headingOne"
+        data-bs-parent="#faqAccordion"
+        style="background: #e7eaff; color: #2c2c7a; font-size: 1rem; padding: 1rem 1.5rem;"
+      >
+        Orienta-la é uma plataforma que conecta criadores de conteúdo com suas audiências de forma segura, organizada e interativa. Você pode criar uma conta como criador ou como seguidor.
+      </div>
+    </div>
+
+    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgb(94 83 255 / 0.15);">
+      <h2 class="accordion-header" id="headingTwo">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+          style="background: #5e53ff; color: #fff; font-weight: 600; font-size: 1.1rem; border: none; box-shadow: none;"
+        >
+          2. Quem pode se registrar na plataforma?
+        </button>
+      </h2>
+      <div
+        id="collapseTwo"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingTwo"
+        data-bs-parent="#faqAccordion"
+        style="background: #e7eaff; color: #2c2c7a; font-size: 1rem; padding: 1rem 1.5rem;"
+      >
+        Qualquer pessoa pode se registrar. Basta escolher se você é um criador de conteúdo (influencer, artista, educador etc.) ou alguém que acompanha criadores.
+      </div>
+    </div>
+
+    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgb(94 83 255 / 0.15);">
+      <h2 class="accordion-header" id="headingThree">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseThree"
+          aria-expanded="false"
+          aria-controls="collapseThree"
+          style="background: #5e53ff; color: #fff; font-weight: 600; font-size: 1.1rem; border: none; box-shadow: none;"
+        >
+          3. O Orienta-la é gratuito?
+        </button>
+      </h2>
+      <div
+        id="collapseThree"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingThree"
+        data-bs-parent="#faqAccordion"
+        style="background: #e7eaff; color: #2c2c7a; font-size: 1rem; padding: 1rem 1.5rem;"
+      >
+        Sim! O cadastro e o uso básico da plataforma são gratuitos tanto para criadores quanto para seguidores.
+      </div>
+    </div>
+
+    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgb(94 83 255 / 0.15);">
+      <h2 class="accordion-header" id="headingFour">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFour"
+          aria-expanded="false"
+          aria-controls="collapseFour"
+          style="background: #5e53ff; color: #fff; font-weight: 600; font-size: 1.1rem; border: none; box-shadow: none;"
+        >
+          4. Posso mudar meu tipo de conta depois de criar?
+        </button>
+      </h2>
+      <div
+        id="collapseFour"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingFour"
+        data-bs-parent="#faqAccordion"
+        style="background: #e7eaff; color: #2c2c7a; font-size: 1rem; padding: 1rem 1.5rem;"
+      >
+        Sim. Basta acessar suas configurações de perfil e alterar o tipo de conta (de criador para seguidor ou vice-versa).
+      </div>
+    </div>
+
+    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgb(94 83 255 / 0.15);">
+      <h2 class="accordion-header" id="headingFive">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseFive"
+          aria-expanded="false"
+          aria-controls="collapseFive"
+          style="background: #5e53ff; color: #fff; font-weight: 600; font-size: 1.1rem; border: none; box-shadow: none;"
+        >
+          5. Como garantir que minha senha é segura?
+        </button>
+      </h2>
+      <div
+        id="collapseFive"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingFive"
+        data-bs-parent="#faqAccordion"
+        style="background: #e7eaff; color: #2c2c7a; font-size: 1rem; padding: 1rem 1.5rem;"
+      >
+        Sua senha deve ter no mínimo 8 caracteres. Recomendamos incluir letras maiúsculas, números e símbolos para maior segurança.
+      </div>
+    </div>
+
+    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgb(94 83 255 / 0.15);">
+      <h2 class="accordion-header" id="headingSix">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseSix"
+          aria-expanded="false"
+          aria-controls="collapseSix"
+          style="background: #5e53ff; color: #fff; font-weight: 600; font-size: 1.1rem; border: none; box-shadow: none;"
+        >
+          6. Meus dados estão seguros?
+        </button>
+      </h2>
+      <div
+        id="collapseSix"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingSix"
+        data-bs-parent="#faqAccordion"
+        style="background: #e7eaff; color: #2c2c7a; font-size: 1rem; padding: 1rem 1.5rem;"
+      >
+        Sim, o Orienta-la segue boas práticas de proteção de dados e políticas de privacidade conforme a legislação vigente.
+      </div>
+    </div>
+
+    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgb(94 83 255 / 0.15);">
+      <h2 class="accordion-header" id="headingSeven">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseSeven"
+          aria-expanded="false"
+          aria-controls="collapseSeven"
+          style="background: #5e53ff; color: #fff; font-weight: 600; font-size: 1.1rem; border: none; box-shadow: none;"
+        >
+          7. Posso excluir minha conta?
+        </button>
+      </h2>
+      <div
+        id="collapseSeven"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingSeven"
+        data-bs-parent="#faqAccordion"
+        style="background: #e7eaff; color: #2c2c7a; font-size: 1rem; padding: 1rem 1.5rem;"
+      >
+        Sim. Você pode excluir sua conta a qualquer momento através das configurações de perfil.
+      </div>
+    </div>
+
+
+    <div class="accordion-item mb-3" style="border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgb(94 83 255 / 0.15);">
+      <h2 class="accordion-header" id="headingNine">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseNine"
+          aria-expanded="false"
+          aria-controls="collapseNine"
+          style="background: #5e53ff; color: #fff; font-weight: 600; font-size: 1.1rem; border: none; box-shadow: none;"
+        >
+          8. Como posso sacar o meu dinheiro?
+        </button>
+      </h2>
+      <div
+        id="collapseNine"
+        class="accordion-collapse collapse"
+        aria-labelledby="headingNine"
+        data-bs-parent="#faqAccordion"
+        style="background: #e7eaff; color: #2c2c7a; font-size: 1rem; padding: 1rem 1.5rem;"
+      >
+        Para sacar seu dinheiro na plataforma Orienta-la, acesse sua conta, vá até a seção <strong>Financeiro</strong> ou <strong>Carteira</strong>, e escolha a opção de saque disponível. Você poderá transferir o valor para sua conta bancária cadastrada ou para métodos de pagamento parceiros. Lembre-se de que pode haver valores mínimos para saque e prazos de processamento conforme as políticas da plataforma.
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
 
 
 

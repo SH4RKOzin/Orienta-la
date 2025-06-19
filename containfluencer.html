@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Criar Conta</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      .full-height-row {
+        display: flex;
+        height: 100vh;
+      }
+
+      .image-col {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: #fff;
+      }
+
+      .form-col {
+        flex: 1;
+        background-color: #5e53ff;
+        color: white;
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .form-col label{
+        color: #fff;
+      }
+      .form-col input {
+        color: black;
+      }
+
+      .form-col input::placeholder {
+        color: #ddd;
+      }
+
+      .form-control:focus {
+        box-shadow: 0 0 0 0.25rem rgba(94, 83, 255, 0.5);
+        border-color: #5e53ff;
+      }
+
+      .btn-primary {
+        background-color: #7c75ff;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background-color: #5a4eff;
+      }
+
+      small.form-text {
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 767.98px) {
+        .full-height-row {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .form-col {
+          padding: 2rem 1rem;
+        }
+
+        .image-col img {
+          width: 100% !important;
+          height: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="full-height-row">
+        <div class="image-col">
+          <img
+            src="assets/svg/svg4.svg"
+            alt="Ilustração"
+            style="max-width: 480px; max-height: 480px; width: 100%; height: auto"
+          />
+        </div>
+        <div class="form-col">
+          <h1 class="mb-4">Criar Conta</h1>
+          <form>
+            <div class="mb-3">
+              <label for="username" class="form-label">Nome de Usuário</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                placeholder="Digita teu nome de infuencer aqui"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="exemplo@email.com"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Crie uma senha com no mínimo 8 caracteres"
+                required
+              />
+              <small id="password-help" class="form-text text-light">
+                A senha deve ter no mínimo 8 caracteres.
+              </small>
+            </div>
+            <div class="mb-3">
+              <label for="confirm-password" class="form-label">Confirmar Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="confirm-password"
+                placeholder="Confirme sua senha pra nao esqueceres"
+                required
+              />
+              <small id="password-match" class="form-text"></small>
+            </div>
+            <p class="mt-3">
+              Ao criar uma conta, você concorda com nossos
+              <a href="#" style="color: red;">Termos de Serviço</a> e
+              <a href="#" style="color: red;">Política de Privacidade</a>.
+            </p>
+            <button type="submit" class="btn btn-primary w-100">Criar Conta</button>
+            <div class="mt-3 text-center">
+              <p>Já tem uma conta? <a href="login.html" style="color: #fff;">Faça LogIn</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const passwordInput = document.getElementById("password");
+      const confirmInput = document.getElementById("confirm-password");
+      const matchMessage = document.getElementById("password-match");
+
+      confirmInput.addEventListener("input", () => {
+        if (confirmInput.value === "") {
+          matchMessage.textContent = "";
+        } else if (confirmInput.value === passwordInput.value) {
+          matchMessage.textContent = "✔ As senhas coincidem.";
+          matchMessage.style.color = "lightgreen";
+        } else {
+          matchMessage.textContent = "✖ As senhas não coincidem.";
+          matchMessage.style.color = "red";
+        }
+      });
+
+      document.querySelector("form").addEventListener("submit", function (e) {
+        const password = passwordInput.value;
+        const confirmPassword = confirmInput.value;
+
+        if (password.length < 8) {
+          alert("A senha deve ter no mínimo 8 caracteres.");
+          e.preventDefault();
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("As senhas não coincidem.");
+          e.preventDefault();
+        }
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
